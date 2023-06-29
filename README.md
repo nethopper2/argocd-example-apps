@@ -19,3 +19,16 @@ to explore ArgoCD and GitOps!
 | [plugins](plugins/) | Apps which demonstrate config management plugins usage |
 | [blue-green](blue-green/) | Demonstrates how to implement blue-green deployment using [Argo Rollouts](https://github.com/argoproj/argo-rollouts)
 | [apps](apps/) | An app composed of other apps |
+| [k8sgpt-example](k8sgpt-example) | Application to demonstrate k8sgpt feature |
+
+
+## k8sgpt-example
+
+Use these values to fix k8sgpt-example application:
+
+```
+image:
+  tag: latest
+selectorLabels: 
+  exampleLabel: "exampleValue"
+```
