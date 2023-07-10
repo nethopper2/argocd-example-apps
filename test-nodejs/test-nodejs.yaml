@@ -22,7 +22,7 @@ spec:
         app: test-nodejs
     spec:
       containers:
-        - name: frontend
+        - name: test-nodejs
           image: nethopper/test-nodejs:latest
           ports:
             - containerPort: 9080
