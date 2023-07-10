@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: test-nodejs
+  namespace: nethopper
   labels:
     app: test-nodejs
   annotations:
@@ -41,6 +42,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: test-nodejs
+  namespace: nethopper
   annotations:
     nginx.ingress.kubernetes.io/backend-protocol: https
     cert-manager.io/cluster-issuer: letsencrypt-prod
