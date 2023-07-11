@@ -63,7 +63,7 @@ spec:
     protocol: TCP
     targetPort: 5000
   selector:
-    app.kubernetes.io/name: test-nodejs
+    app: test-nodejs
   sessionAffinity: None
   type: ClusterIP
 ---
