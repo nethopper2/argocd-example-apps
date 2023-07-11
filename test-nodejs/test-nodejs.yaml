@@ -25,6 +25,9 @@ spec:
       containers:
         - name: test-nodejs
           image: nethopper/test-nodejs:latest
+          env:
+          - name: RUNTIMEENV
+            value: "Kubernetes GitOps"
           ports:
             - containerPort: 9080
               protocol: TCP
