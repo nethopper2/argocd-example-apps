@@ -14,6 +14,11 @@ spec:
         app: guestbook-ui
     spec:
       containers:
+      livenessProbe:
+        tcpSocket:
+          port: 80
+        initialDelaySeconds: 5
+        periodSeconds: 5
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
         name: guestbook-ui
         ports:
