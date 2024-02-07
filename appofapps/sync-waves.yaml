@@ -7,7 +7,7 @@ metadata:
 spec:
   destination:
     name: ''
-    namespace: default
+    namespace: nethopper
     server: 'https://kubernetes.default.svc'
   source:
     path: sync-waves
