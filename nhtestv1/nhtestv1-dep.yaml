@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - image: docker.io/nethopper/simple-node-server:v1
-        name: nhtestv1
+        name: simple-node-server
         ports:
         - containerPort: 80
         livenessProbe:
