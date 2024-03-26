@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: nhtestv1
   annotations:
-  service.beta.kubernetes.io/aws-load-balancer-type: nlb
+    service.beta.kubernetes.io/aws-load-balancer-type: nlb
 spec:
   type: LoadBalancer
   ports:
