@@ -21,7 +21,18 @@ spec:
               number: 8080
         path: /
         pathType: Prefix
+  - host: test-service.prod.nh-network.mynethopper.net
+    http:
+      paths:
+      - backend:
+          service:
+            name: nhtestv1
+            port:
+              number: 8080
+        path: /
+        pathType: Prefix
   tls:
   - hosts:
     - nhtestv1.hub-server-1.nh-network-1.mynethopper.net
+    - test-service.prod.nh-network.mynethopper.net
     secretName: nhtestv1-tls
