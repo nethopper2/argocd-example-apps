@@ -17,7 +17,7 @@ spec:
       - image: docker.io/nethopper/simple-node-server:v1
         name: simple-node-server
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         # livenessProbe:
         #   httpGet:
         #     path: /
