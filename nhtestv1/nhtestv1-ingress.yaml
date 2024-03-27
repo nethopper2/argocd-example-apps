@@ -1,17 +1,11 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-prod
-    kubernetes.io/ingress.class: nginx
-    kubernetes.io/tls-acme: "true"
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/tls-acme: "true"
   name: nhtestv1-ingress
 spec:
+  ingressClassName: nginx
   rules:
-  - host: nhtestv1.hub-server-1.nh-network-1.mynethopper.net
+  - host: nhtestv1.kl-edge-21.mynethopper.net
     http:
       paths:
       - backend:
@@ -21,7 +15,7 @@ spec:
               number: 8080
         path: /
         pathType: Prefix
-  - host: test-service.prod.nh-network.mynethopper.net
+  - host: nhtest.prod.mynethopper.net
     http:
       paths:
       - backend:
@@ -31,8 +25,3 @@ spec:
               number: 8080
         path: /
         pathType: Prefix
-  tls:
-  - hosts:
-    - nhtestv1.hub-server-1.nh-network-1.mynethopper.net
-    - test-service.prod.nh-network.mynethopper.net
-    secretName: nhtestv1-tls
