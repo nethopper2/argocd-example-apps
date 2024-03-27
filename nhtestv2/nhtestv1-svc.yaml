@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nhtestv1
+spec:
+  type: ExternalName
+  externalName: nhtestv1.hub-server-1.nh-network-1.mynethopper.net
