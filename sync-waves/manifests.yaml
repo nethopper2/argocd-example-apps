@@ -17,16 +17,16 @@ spec:
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: backend
+  name: backend-test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      tier: backend
+      tier: backend-test
   template:
     metadata:
       labels:
-        tier: backend
+        tier: backend-test
     spec:
       containers:
         - name: main
@@ -35,10 +35,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend
+  name: backend-test
 spec:
   selector:
-    tier: backend
+    tier: backend-test
   ports:
     - protocol: TCP
       port: 8080
